@@ -2,7 +2,7 @@ import Logo from '#/images/logo.svg';
 import { Icon } from '@iconify/react';
 import Image from 'next/image';
 
-function Navbar() {
+const Navbar = () => {
   return (
     <nav className='py- fixed left-0 top-0 z-50 flex h-16 w-full items-center justify-between bg-black px-4 md:px-5 lg:h-20 lg:px-10 lg:py-4'>
       <div className='flex h-full items-center gap-2 py-3'>
@@ -21,6 +21,6 @@ function Navbar() {
       </button>
     </nav>
   );
-}
+};
 
 export default Navbar;

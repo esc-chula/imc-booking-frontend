@@ -8,10 +8,12 @@ const propmt = Prompt({
   variable: '--font-prompt',
 });
 
-export default function App({ Component, pageProps }: AppProps) {
+const App = ({ Component, pageProps }: AppProps) => {
   return (
     <main className={`${propmt.className} font-sans`}>
       <Component {...pageProps} />
     </main>
   );
-}
+};
+
+export default App;
