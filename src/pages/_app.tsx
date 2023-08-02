@@ -1,6 +1,17 @@
 import '@/styles/globals.css';
 import type { AppProps } from 'next/app';
+import { Prompt } from 'next/font/google';
+
+const propmt = Prompt({
+  subsets: ['latin'],
+  weight: ['400', '800'],
+  variable: '--font-prompt',
+});
 
 export default function App({ Component, pageProps }: AppProps) {
-  return <Component {...pageProps} />;
+  return (
+    <main className={`${propmt.className} font-sans`}>
+      <Component {...pageProps} />
+    </main>
+  );
 }
