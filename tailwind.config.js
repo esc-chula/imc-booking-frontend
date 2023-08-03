@@ -2,6 +2,7 @@
 module.exports = {
   content: [
     './src/pages/**/*.{js,ts,jsx,tsx,mdx}',
+    './src/layouts/**/*.{js,ts,jsx,tsx,mdx}',
     './src/components/**/*.{js,ts,jsx,tsx,mdx}',
     './src/app/**/*.{js,ts,jsx,tsx,mdx}',
   ],
@@ -13,10 +14,11 @@ module.exports = {
           'conic-gradient(from 180deg at 50% 50%, var(--tw-gradient-stops))',
       },
       fontFamily: {
-        prompt: ['(--var(--font-prompt))'],
+        prompt: ['(--var(--font-prompt))', 'sans-serif'],
       },
       colors: {
         black: '#161517',
+        darkgray: '#1E1D1E',
         white: '#FFFFFF',
         red: '#E83B37',
         gray: '#696969',

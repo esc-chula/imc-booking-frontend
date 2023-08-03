@@ -1,4 +1,4 @@
-import Logo from '#/images/logo.svg';
+import Logo from '#/icons/logo.svg';
 import { Icon } from '@iconify/react';
 import Image from 'next/image';
 

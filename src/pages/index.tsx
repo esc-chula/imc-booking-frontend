@@ -1,12 +1,22 @@
 import Navbar from '@/components/Navbar';
-import { Inter } from 'next/font/google';
-
-const inter = Inter({ subsets: ['latin'] });
+import Booking from '@/components/index/booking';
+import Faq from '@/components/index/faq';
+import Info from '@/components/index/info';
+import Instrument from '@/components/index/instrument';
+import Rule from '@/components/index/rule';
+import DefaultLayout from '@/layouts/DefaultLayout';
 
 const Index = () => {
   return (
     <main>
-      <Navbar />
+      <DefaultLayout>
+        <Navbar />
+        <Info />
+        <Instrument />
+        <Rule />
+        <Faq />
+        <Booking />
+      </DefaultLayout>
     </main>
   );
 };
