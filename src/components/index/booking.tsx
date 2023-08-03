@@ -1,4 +1,5 @@
 import BookOpen from '#/icons/book-open.svg';
+import Button from '@/components/Button';
 import Image from 'next/image';
 
 const Booking = () => {
@@ -8,9 +9,9 @@ const Booking = () => {
 
       <Image src={BookOpen} alt='Open book' className='mt-2 w-44' />
 
-      <button className='mt-2 rounded-lg bg-red px-5 py-2 text-xl font-bold text-white'>
+      <Button type='primary' size='fit' className='mt-3'>
         จองห้องซ้อม
-      </button>
+      </Button>
     </div>
   );
 };
