@@ -17,6 +17,7 @@ const Index = () => {
         <Faq />
         <Booking />
       </DefaultLayout>
+      Hello kub code pang nae nae
     </main>
   );
 };
