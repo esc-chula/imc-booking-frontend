@@ -1,14 +1,14 @@
 import DefaultLayout from '@/layouts/DefaultLayout';
 import Navbar from '@/components/Navbar';
 import React from 'react';
-import TimeSelect from '@/components/reservation/timeSelect';
-import Detail from '@/components/reservation/detail';
+import TimeSelect from '@/components/booking/timeSelect';
+import Detail from '@/components/booking/detail';
 import { useState } from 'react';
-import DateSelect from '@/components/reservation/dateSelect';
+import DateSelect from '@/components/booking/dateSelect';
 import Button from '@/components/Button';
-import ConfirmModal from '@/components/reservation/confirmModal';
+import ConfirmModal from '@/components/booking/confirmModal';
 
-const Reservation: React.FC = () => {
+const Booking: React.FC = () => {
   const [selectedDate, setSelectedDate] = useState<Date | null>(null);
   const [timeSelected, setTimeSelected] = useState<Array<boolean>>(
     Array(24).fill(false)
@@ -64,10 +64,10 @@ const Reservation: React.FC = () => {
             Confirm
           </Button>
         </div>
-        {confirmModal && <ConfirmModal />}
+        {confirmModal && <ConfirmModal setConfirmModal={setConfirmModal} />}
       </form>
     </DefaultLayout>
   );
 };
 
-export default Reservation;
+export default Booking;
