@@ -7,7 +7,7 @@ import { ReactElement, ReactNode } from 'react';
 
 const propmt = Prompt({
   subsets: ['latin', 'thai'],
-  weight: ['400', '800'],
+  weight: ['400', '600', '800'],
   variable: '--font-prompt',
 });
 
