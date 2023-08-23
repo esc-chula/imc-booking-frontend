@@ -29,6 +29,9 @@ dependencies:
   react-dom:
     specifier: 18.2.0
     version: 18.2.0(react@18.2.0)
+  react-loading-hook:
+    specifier: ^1.0.0
+    version: 1.0.0(react-dom@18.2.0)(react@18.2.0)
   typescript:
     specifier: 5.1.6
     version: 5.1.6
@@ -2227,6 +2230,16 @@ packages:
 
   /react-is@16.13.1:
     resolution: {integrity: sha512-24e6ynE2H+OKt4kqsOvNd8kBpV65zoxbA4BVsEOB3ARVWQki/DHzaUoC5KuON/BiccDaCCTZBuOcfZs70kR8bQ==}
+    dev: false
+
+  /react-loading-hook@1.0.0(react-dom@18.2.0)(react@18.2.0):
+    resolution: {integrity: sha512-lyGm2Rk5Np2eZgiJl8EBOfoyJrStEDTuVq6xD5ebGsDsblhu9dECgJxGYg3d8gFgyl6Y2vbnVAUYLg6UmYPtEA==}
+    peerDependencies:
+      react: ^18.2.0
+      react-dom: ^18.2.0
+    dependencies:
+      react: 18.2.0
+      react-dom: 18.2.0(react@18.2.0)
     dev: false
 
   /react@18.2.0:
