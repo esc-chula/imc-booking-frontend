@@ -1,12 +1,12 @@
 import LgLogo from '#/icons/lg-logo.svg';
-import Image from 'next/image';
 import LINELoginButton from '@/components/login/LINELoginButton';
-import { NextPageWithLayout } from './_app';
-import { useLoadingCallback } from 'react-loading-hook';
-import { useRouter } from 'next/router';
-import { GetServerSideProps } from 'next';
-import { useEffect, useState } from 'react';
 import Loading from '@/components/login/loading';
+import { GetServerSideProps } from 'next';
+import Image from 'next/image';
+import { useRouter } from 'next/router';
+import { useEffect, useState } from 'react';
+import { useLoadingCallback } from 'react-loading-hook';
+import { NextPageWithLayout } from './_app';
 
 const LoginPage: NextPageWithLayout = () => {
   const router = useRouter();
