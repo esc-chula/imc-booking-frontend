@@ -2,7 +2,7 @@ import clsx from 'clsx';
 import { DetailedHTMLProps, ButtonHTMLAttributes } from 'react';
 
 type CustomButtonProps = {
-  buttonType: 'primary' | 'secondary';
+  variant: 'primary' | 'secondary';
   size: 'fit' | 'full';
   children?: React.ReactNode;
   className?: string;
@@ -12,7 +12,7 @@ type ButtonProps = CustomButtonProps &
   DetailedHTMLProps<ButtonHTMLAttributes<HTMLButtonElement>, HTMLButtonElement>;
 
 const Button = ({
-  buttonType,
+  variant,
   size,
   children,
   onClick,
@@ -24,8 +24,8 @@ const Button = ({
       className={clsx(
         'rounded-lg text-xl font-bold',
         {
-          'bg-red px-5 py-2 text-white': buttonType === 'primary',
-          'bg-gray px-5 py-2 text-white': buttonType === 'secondary',
+          'bg-red px-5 py-2 text-white': variant === 'primary',
+          'bg-gray px-5 py-2 text-white': variant === 'secondary',
         },
         {
           'w-full': size === 'full',

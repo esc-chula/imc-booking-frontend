@@ -1,5 +1,5 @@
 import TextField from '@/components/TextField';
-import { FormEvent, FormEventHandler } from 'react';
+import { FormEvent } from 'react';
 import { useLoadingCallback } from 'react-loading-hook';
 import Image from 'next/image';
 import LgLogo from '#/icons/lg-logo.svg';
@@ -34,7 +34,7 @@ function SignUpPage() {
         <Button
           className='uppercase'
           type='submit'
-          buttonType='primary'
+          variant='primary'
           size='fit'
         >
           Sign Up
