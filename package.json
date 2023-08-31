@@ -19,7 +19,8 @@
     "react": "18.2.0",
     "react-dom": "18.2.0",
     "react-loading-hook": "^1.0.0",
-    "typescript": "5.1.6"
+    "typescript": "5.1.6",
+    "zod": "^3.22.2"
   },
   "devDependencies": {
     "@iconify/react": "^4.1.1",

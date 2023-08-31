@@ -1,21 +1,31 @@
 import clsx from 'clsx';
+import { DetailedHTMLProps, ButtonHTMLAttributes } from 'react';
 
-type ButtonProps = {
-  type: 'primary' | 'secondary';
+type CustomButtonProps = {
+  variant: 'primary' | 'secondary';
   size: 'fit' | 'full';
   children?: React.ReactNode;
-  onClick?: () => void;
   className?: string;
 };
 
-const Button = ({ type, size, children, onClick, className }: ButtonProps) => {
+type ButtonProps = CustomButtonProps &
+  DetailedHTMLProps<ButtonHTMLAttributes<HTMLButtonElement>, HTMLButtonElement>;
+
+const Button = ({
+  variant,
+  size,
+  children,
+  onClick,
+  className,
+  ...props
+}: ButtonProps) => {
   return (
     <button
       className={clsx(
         'rounded-lg text-xl font-bold',
         {
-          'bg-red px-5 py-2 text-white': type === 'primary',
-          'bg-gray px-5 py-2 text-white': type === 'secondary',
+          'bg-red px-5 py-2 text-white': variant === 'primary',
+          'bg-gray px-5 py-2 text-white': variant === 'secondary',
         },
         {
           'w-full': size === 'full',
@@ -24,6 +34,7 @@ const Button = ({ type, size, children, onClick, className }: ButtonProps) => {
         className
       )}
       onClick={onClick}
+      {...props}
     >
       {children}
     </button>

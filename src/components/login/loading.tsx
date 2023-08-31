@@ -1,9 +1,28 @@
-const Loading = () => {
+import clsx from 'clsx';
+import { DetailedHTMLProps, HTMLAttributes } from 'react';
+
+type LoadingProps = { size?: number } & DetailedHTMLProps<
+  HTMLAttributes<HTMLDivElement>,
+  HTMLDivElement
+>;
+
+const Loading = ({ size, className, ...props }: LoadingProps) => {
+  const loaderSize = !!size ? `h-${size} w-${size}` : 'h-8 w-8';
   return (
-    <div role='status' className='grid flex-1 place-items-center'>
+    <div
+      role='status'
+      className={clsx(
+        'grid flex-1 place-items-center fill-white text-black',
+        className
+      )}
+      {...props}
+    >
       <svg
         aria-hidden='true'
-        className='text-gray-200 dark:text-gray-600 mr-2 h-8 w-8 animate-spin fill-white text-black'
+        className={clsx(
+          'text-gray-200 dark:text-gray-600 mr-2 animate-spin fill-inherit text-inherit',
+          loaderSize
+        )}
         viewBox='0 0 100 101'
         fill='none'
         xmlns='http://www.w3.org/2000/svg'

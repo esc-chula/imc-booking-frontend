@@ -9,7 +9,7 @@ const Booking = () => {
 
       <Image src={BookOpen} alt='Open book' className='mt-2 w-44' />
 
-      <Button type='primary' size='fit' className='mt-3'>
+      <Button variant='primary' size='fit' className='mt-3'>
         จองห้องซ้อม
       </Button>
     </div>
